@@ -1,4 +1,4 @@
-<h2><a href="https://relaxed-jennings-cd878d.netlify.app/">Live Site</a><h2>
+<h2><a href="https://relaxed-jennings-cd878d.netlify.app/">Live Site</a></h2>
   
   <h2>Tech:</h2>
   <ul>
