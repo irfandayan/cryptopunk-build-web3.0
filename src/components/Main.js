@@ -1,41 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./Main.css";
 import instagramLogo from "../assets/owner/instagram.png";
 import twitterLogo from "../assets/owner/twitter.png";
 import moreIcon from "../assets/owner/more.png";
 
-const Main = () => {
+const Main = ({ selectedPunk, punkListData }) => {
+  const [activePunk, setActivePunk] = useState(punkListData[0]);
+
+  useEffect(() => {
+    setActivePunk(punkListData[selectedPunk]);
+  }, [punkListData, selectedPunk]);
   return (
     <div className="main">
       <div className="mainContent">
         <div className="punkImageWrapper">
           <div className="selectedPunk">
-            <img
-              className="selectedPunk"
-              src="https://lh3.googleusercontent.com/m-Ws730SPYfr1hhPi44UWd923AthhSYnetE8x32yJf1b4GPOTOwdsgK9yXN7naVm7Y884R7e7yTxzMjDGfwpZaRQmfgA4Zo5CXy_jg"
-              alt=""
-            />
+            <img className="selectedPunk" src={activePunk.image_url} alt="" />
           </div>
         </div>
 
         <div className="punkDeatilWrapper">
           <div className="punkDetailTitleNumberWrapper">
-            <div className="punkDetailTitle">Bandana Punk</div>
-            <div className="punkDetailNumber">.#3</div>
+            <div className="punkDetailTitle">{activePunk.name}</div>
+            <div className="punkDetailNumber">.#{activePunk.token_id}</div>
           </div>
 
           <div className="punkDetailOwner">
             <div className="OwnerAddressWrapper">
               <div className="ownerAddress">
                 <div className="ownerImageContainer">
-                  <img
-                    src="https://lh3.googleusercontent.com/m-Ws730SPYfr1hhPi44UWd923AthhSYnetE8x32yJf1b4GPOTOwdsgK9yXN7naVm7Y884R7e7yTxzMjDGfwpZaRQmfgA4Zo5CXy_jg"
-                    alt=""
-                  />
+                  <img src={activePunk.owner.profile_img_url} alt="" />
                 </div>
                 <div className="ownerAddressContainer">
-                  <span>0xFe0b1F9A5ef53b7c7F1eCF3Ce3999C5450078Dd0</span>
+                  <span>{activePunk.owner.address}</span>
                   <div className="ownerHandle">@irfandayan</div>
                 </div>
               </div>

@@ -73,3 +73,34 @@
   border-radius: 50px;
   color: black;
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: 400px;
+  }
+  .punkDetailTitle,
+  .punkDetailNumber {
+    font-size: 18px !important;
+  }
+  .punkDeatilWrapper {
+    padding: 0 !important;
+  }
+  .ownerAddressContainer > span {
+    font-size: 10px;
+  }
+  .punkDetailOwner {
+    flex-direction: column;
+  }
+  .ownerLinksWrapper {
+    margin-top: 20px;
+  }
+  .punkList {
+    flex-direction: column;
+    align-items: center;
+  }
+  .collectionCard {
+    margin-bottom: 20px;
+    margin-right: 0px !important;
+  }
+}

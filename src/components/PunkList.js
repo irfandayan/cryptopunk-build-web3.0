@@ -3,11 +3,12 @@ import React from "react";
 import "./PunkList.css";
 import CollectionCard from "./CollectionCard";
 
-const PunkList = ({ punkListData }) => {
+const PunkList = ({ punkListData, setSelectedPunk }) => {
+  // console.log(punkListData[0]);
   return (
     <div className="punkList">
       {punkListData.map((punk) => (
-        <div key={punk.token_id}>
+        <div key={punk.token_id} onClick={() => setSelectedPunk(punk.token_id)}>
           <CollectionCard
             id={punk.token_id}
             name={punk.name}
