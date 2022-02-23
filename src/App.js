@@ -3,7 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 import Header from "./components/Header";
-import CollectionCard from "./components/CollectionCard";
+
 import PunkList from "./components/PunkList";
 import Main from "./components/Main";
 
