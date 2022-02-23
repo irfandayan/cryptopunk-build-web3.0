@@ -6,6 +6,7 @@ import twitterLogo from "../assets/owner/twitter.png";
 import moreIcon from "../assets/owner/more.png";
 
 const Main = ({ selectedPunk, punkListData }) => {
+  console.log("Selected Punk is " + selectedPunk);
   const [activePunk, setActivePunk] = useState(punkListData[0]);
 
   useEffect(() => {

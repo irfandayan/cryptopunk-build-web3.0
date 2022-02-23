@@ -4,7 +4,6 @@ import "./PunkList.css";
 import CollectionCard from "./CollectionCard";
 
 const PunkList = ({ punkListData, setSelectedPunk }) => {
-  // console.log(punkListData[0]);
   return (
     <div className="punkList">
       {punkListData.map((punk) => (

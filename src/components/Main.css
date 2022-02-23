@@ -94,17 +94,21 @@
   width: 100%;
 }
 
-/* 
-
-.ownerLink {
-  padding: 12px;
-  border-radius: 50px;
-  height: 50px;
-  width: 50px;
-  border: 1px solid #fff;
-  margin: 0 0 0 10px;
+@media (max-width: 768px) {
+  .punkDetailTitle,
+  .punkDetailNumber {
+    font-size: 18px;
+  }
+  .punkDeatilWrapper {
+    padding: 0;
+  }
+  .ownerAddressContainer > span {
+    font-size: 10px;
+  }
+  .punkDetailOwner {
+    flex-direction: column;
+  }
+  .ownerLinksWrapper {
+    margin-top: 20px;
+  }
 }
-.ownerLink > img {
-  height: 100%;
-  width: 100%;
-} */

@@ -40,3 +40,10 @@
   margin-top: 10px;
   object-fit: container;
 }
+
+@media (max-width: 768px) {
+  .collectionCard {
+    margin-bottom: 20px;
+    margin-right: 0px !important;
+  }
+}
